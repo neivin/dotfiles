@@ -52,10 +52,15 @@ let &t_SI="\<Esc>]50;CursorShape=1\x7"
 let &t_SR="\<Esc>]50;CursorShape=2\x7"
 let &t_EI="\<Esc>]50;CursorShape=0\x7"
 
+" Highlight area beyond column 120
+let &colorcolumn=join(range(121,999),",")
+highlight ColorColumn ctermbg=235
+
 " KEY MAPPING:
 " --------------------------------------------------
-inoremap jk <esc>`^                " Map jk to esc
-inoremap <esc> <nop>                " Unmap esc key
+" Map esc to jk and unmap esc key
+inoremap jk <esc>`^
+inoremap <esc> <nop>                
 
 " Habit breaking - Unmap arrow keys
 noremap <Up> <nop>
