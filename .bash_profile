@@ -7,8 +7,8 @@ export EDITOR='vim'
 export HISTCONTORL=ignoredups
 
 # Prompt settings
-export PS1="\[\033[38;5;205m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;72m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;220m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\] "
 export CLICOLOR='xterm-color'
+export PS1="\[\033[38;5;39m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;214m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
 
 # Autocompletion script for git branches and commands
 if [ -f ~/.git/.git_autocompletion.bash ]; then
@@ -71,10 +71,6 @@ alias mt='mvn clean install -T4 -Dintegration'
 alias mts='mvn clean install -Dintegration'
 alias mu='mvn clean install -T4'
 
-#java verison
-alias j7='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home'
-alias j8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home'
-
 #repositories
 alias bamboo='cd ~/source/bamboo'
 alias cppclient='cd ~/source/cppclient'
@@ -87,24 +83,11 @@ alias tappmo='cd ~/source/com.tappmo'
 alias inception='cd ~/source/inception'
 alias pasta='cd ~/source/scalablepasta'
 
-#npm
-alias nb='npm run build'
-alias nbf='bamboo; rm -rf node_modules/; gpm; ./scripts/setup.sh; ./scripts/build.sh;'
-alias nr='npm run'
-alias nt='npm run test'
-
 #blaze
 alias bb='blaze build && rm -rf out/'
 alias bi='blaze intellij'
 alias br='blaze release'
 alias bt='blaze test'
-
-#cppclient
-alias cboot='cppclient; ./scripts/start_bootstrap.sh'
-alias cc='./scripts/build.py -c'
-alias ct='./scripts/build.py --posshog'
-alias cct='cc;ct'
-alias brccct='tappmo;br;cppclient;cct;'
 
 #scripts
 alias bootstrap='~/source/environment/shared-scripts/start_bootstrap.py'
