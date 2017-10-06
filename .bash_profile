@@ -7,17 +7,22 @@ export EDITOR='vim'
 export HISTCONTORL=ignoredups
 
 # Prompt settings
-export PS1="\[\033[38;5;39m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;72m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;220m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\] "
+export PS1="\[\033[38;5;205m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;72m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;220m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\] "
 export CLICOLOR='xterm-color'
 
 # Autocompletion script for git branches and commands
-git_autocompletion='~/.git/.git_autocompletion.bash'
-if [-t $git_autocompletion]
-  source $git_autocompletion
+if [ -f ~/.git/.git_autocompletion.bash ]; then
+  . ~/.git/.git_autocompletion.bash
+
+  # Add git completion to aliases
+  __git_complete go _git_checkout
+  __git_complete gm _git_merge
+  __git_complete gp _git_pull
+  __git_complete gd _git_diff
+  __git_complete gb _git_branch
 fi
 
-# Aliases:
-#--------------------------------------------------
+#ALIASES
 # General
 alias c='clear'
 alias ll='ls -alH'
@@ -48,6 +53,10 @@ alias glo='gl --oneline'
 alias gadog='gl --all --decorate --oneline --graph'
 alias gcln='git clean -n'
 alias gclf='git clean -f'
+alias gph='git push origin HEAD'
+
+# hub 
+alias hc='hub compare'
 
 # Phabricator Code review aliases
 alias adpb='arc diff --preview --browse'
