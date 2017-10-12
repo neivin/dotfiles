@@ -56,11 +56,18 @@ let &t_EI="\<Esc>]50;CursorShape=0\x7"
 " --------------------------------------------------
 " Map esc to jk and unmap esc key
 inoremap jk <esc>`^
+
 inoremap <esc> <nop>
+vnoremap <esc> <nop>
 
 " Habit breaking - Unmap arrow keys
 inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
 
