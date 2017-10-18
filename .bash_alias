@@ -35,11 +35,7 @@ alias gph='git push origin HEAD'
 
 # hub 
 alias hc='hub compare'
-
-# Phabricator Code review aliases
-alias adpb='arc diff --preview --browse'
-alias al='arc land'
-alias alr='arc land --revision'
+alias gpc='git push origin HEAD && hub compare'
 
 # maven
 alias mb='mvn -U clean install -T4 -DskipTests'
@@ -50,15 +46,10 @@ alias mts='mvn clean install -Dintegration'
 alias mu='mvn clean install -T4'
 
 #repositories
-alias bamboo='cd ~/source/bamboo'
-alias cppclient='cd ~/source/cppclient'
-alias environment='cd ~/source/environment'
-alias javaclient='cd ~/source/javaclient'
-alias legacy='cd ~/source/legacy'
-alias legacyjc='cd ~/source/legacy_javaclient'
 alias tappmo='cd ~/source/com.tappmo'
 alias inception='cd ~/source/inception'
 alias pasta='cd ~/source/scalablepasta'
+alias sdk='cd ~/source/sdk'
 
 #blaze
 alias bb='blaze build && rm -rf out/'
@@ -67,9 +58,6 @@ alias br='blaze release'
 alias bt='blaze test'
 
 #scripts
-alias bootstrap='~/source/environment/shared-scripts/start_bootstrap.py'
-alias kibana='~/source/ops/tools/kibana.py'
-alias rp='./scripts/remote_precommit.sh'
 alias totem='~/source/inception/ix4690/ops/totem.py'
 alias vpnkeys='ssh-add ~/.ssh/devkey.pem'
 alias rr='~/source/environment/shared-scripts/remote_run.sh'
