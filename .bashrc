@@ -89,3 +89,5 @@ alias totem='~/source/inception/ix4690/ops/totem.py'
 alias vpnkeys='ssh-add ~/.ssh/devkey.pem'
 alias rr='~/source/environment/shared-scripts/remote_run.sh'
 
+# ssh
+alias ssha='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
