@@ -11,8 +11,8 @@ set nocompatible
 " Execute Pathogen bundler
 execute pathogen#infect()
 
-" Autocomplete parenthesis, quotes, etc.
-let delimitMate_expand_cr=1
+
+" ---- Appearance
 
 " Search settings
 set hlsearch                        " Enable search highlight on startup
@@ -20,15 +20,12 @@ set incsearch                       " Highlight matches as you type
 set ignorecase                      " Case-insensitive search
 set smartcase                       " Case sensitive search if caps
 
-
-" ---- Appearance
-
 " Syntax highlighting
 if !exists("g:syntax_on")
   syntax enable
 endif
 
-" Colors
+" ---- Colorscheme settings
 set background=dark
 set t_Co=256
 
@@ -39,12 +36,25 @@ let g:solarized_contrast="high"
 " Use Solarized but don't throw an error if it doesn't exist
 :silent! colorscheme solarized
 
+" ---- Other settings
+
 filetype indent plugin on
 
+" Use mouse
+" In iTerm2 this is in Preferences > Profiles > Terminal > Enable mouse
+" reporting/Report mouse wheel events
+set mouse=a
+
+" Show command
+set showcmd
+
+" Backspace
+set backspace=indent,eol,start
+
 " Line information
+set ruler
 set number                          " Show line numbers
 set cursorline                      " Highlight current line
-set ruler
 
 " Tab settings
 set shiftwidth=2
