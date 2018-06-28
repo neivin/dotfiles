@@ -34,7 +34,12 @@ alias c='clear'
 alias ll='ls -alH'
 alias grep='grep --color=auto'
 
-#git
+# hub
+alias git='hub'
+alias hc='hub compare'
+alias gpc='git push origin HEAD && hub compare'
+
+# git
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
@@ -59,35 +64,6 @@ alias gadog='gl --all --decorate --oneline --graph'
 alias gcln='git clean -n'
 alias gclf='git clean -f'
 alias gph='git push origin HEAD'
-
-# hub 
-alias hc='hub compare'
-alias gpc='git push origin HEAD && hub compare'
-
-# maven
-alias mb='mvn -U clean install -T4 -DskipTests'
-alias mbs='mvn -U clean install -DskipTests'
-alias mr='mvn clean install -T4 -DskipTests -Drelease'
-alias mt='mvn clean install -T4 -Dintegration'
-alias mts='mvn clean install -Dintegration'
-alias mu='mvn clean install -T4'
-
-#repositories
-alias tappmo='cd ~/source/com.tappmo'
-alias inception='cd ~/source/inception'
-alias pasta='cd ~/source/scalablepasta'
-alias sdk='cd ~/source/sdk'
-
-#blaze
-alias bb='blaze build && rm -rf out/'
-alias bi='blaze intellij'
-alias br='blaze release'
-alias bt='blaze test'
-
-#scripts
-alias totem='~/source/inception/ix4690/ops/totem.py'
-alias vpnkeys='ssh-add ~/.ssh/devkey.pem'
-alias rr='~/source/environment/shared-scripts/remote_run.sh'
 
 # ssh
 alias ssha='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
