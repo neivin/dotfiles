@@ -1,7 +1,0 @@
-if [ -f $HOME/dotfiles/.bash_profile ]; then
-	source $HOME/dotfiles/.bash_profile
-	echo "[nm] bash_profile sourced"
-else
-	echo "[nm] error: Could not source bash_profile"
-fi
-

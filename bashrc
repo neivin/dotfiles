@@ -2,7 +2,7 @@
 # 
 # Author: Neivin Mathew
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Increase size of history buffer
 export HISTSIZE=10000
