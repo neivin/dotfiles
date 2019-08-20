@@ -1,34 +1,42 @@
-set number
+" init.vim
+"
+" Neivin Mathew - me@neivin.com
+" Aug 20, 2019
 
 let mapleader = ","
 
 " Plugins
 call plug#begin()
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf'
+Plug 'airblade/vim-gitgutter'
+set updatetime=100
+
 " Deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+" Plug 'Shougo/deoplete.nvim', { 'do': ':NeoBundleRemotePlugins' }
+" let g:deoplete#enable_at_startup = 1
 call plug#end()
 
+" Colorscheme settings
 syntax on
 set background=dark
 colorscheme tomorrow-night
+let g:airline_theme='base16_tomorrow'
 
 " Keybindings
 inoremap jk <Esc>
 
 " Search settings
-set hlsearch                        " Enable search highlight on startup
-set incsearch                       " Highlight matches as you type
-set ignorecase                      " Case-insensitive search
-set smartcase                       " Case sensitive search if caps
+" Enable highlight searching
+set hlsearch
+" Incremental search (match as you type)
+set incsearch
+" Case insensivite search
+set ignorecase
+" Case sensitive if caps detected
+set smartcase
 
 filetype indent plugin on
 
